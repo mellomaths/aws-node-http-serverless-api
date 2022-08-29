@@ -5,6 +5,9 @@ frameworkVersion: '3'
 
 provider:
   name: aws
+  deploymentMethod: direct
+  # stage: dev (default)
+  # region: us-east-1 (default)
   runtime: nodejs14.x
   environment:
     DYNAMODB_CUSTOMER_TABLE: ${self:service}-customerTable-${sls:stage}
